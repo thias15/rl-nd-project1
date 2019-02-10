@@ -1,9 +1,11 @@
-
 # Deep RL Nanodegree - Report for Project 1
 In this project, an agent is trained to navigate (and collect bananas!) in a large, square world. 
 
 ## Learning Algorithm
-In order to solve this problem, [DQN](https://storage.googleapis.com/deepmind-media/dqn/DQNNaturePaper.pdf) is used. DQN is a [Q-learning](https://en.wikipedia.org/wiki/Q-learning) algorithm that uses deep learning to estimate the Q-function.
+In order to solve this problem, [DQN](https://storage.googleapis.com/deepmind-media/dqn/DQNNaturePaper.pdf) is used. DQN is a [Q-learning](https://en.wikipedia.org/wiki/Q-learning) algorithm that uses deep learning to estimate the Q-function. 
+In contrast to previous methods it has two key features making it work so well: 
+- Experience Replay
+- Fixed Q-Targets
 
 ## Training Details
 The following hyper-parameters were used. 
@@ -18,8 +20,9 @@ UPDATE_EVERY = 4        # how often to update the network
 ```
 
 ## Plot of Rewards
-The environment was solved in 398 episodes!	Average Score: 13.04
 ![RewardPlot](training_plot.png)
+
+The environment was solved in 398 episodes!	Average Score: 13.04
 
 ## Future Work
 
