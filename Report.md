@@ -7,6 +7,13 @@ In contrast to previous methods it has two key features making it work so well:
 - Experience Replay
 - Fixed Q-Targets
 
+## Network Architechture
+In order to approximate the Q-funtion a simple 3 layer fully-connected network is used. The network consists of a 37-dimensional input layer, two hidden layers with 64 nodes each and a 4-dimensional output layer.
+
+The input vector encodes the agent's velocity and a ray-based perception of objects around agent's forward direction. The output vector contains the four possible actions: forward, left, right, backward.
+
+![Network Architechture](https://i1.wp.com/www.parallelr.com/wp-content/uploads/2016/02/dnn_architecture.png)
+
 ## Training Details
 The following hyper-parameters were used. 
 
