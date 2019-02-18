@@ -28,7 +28,13 @@ The environment was solved in 398 episodes!	Average Score: 13.04
 
 ### Improved version of DQN
 
-Implement a double DQN, a dueling DQN, and/or prioritized experience replay!
+Since vanilla DQN already works quite well for this simple task it might be an overkill but there are several follow-up works on DQN that should lead to better performance. 
+
+A commonly known problem of vanilla DQN is overestimation of action values. This is addressed in [double DQN](https://arxiv.org/abs/1509.06461). 
+
+Similarly, better performance may be achieved by implementing a [dueling DQN](https://arxiv.org/abs/1511.06581). In duelling DQN there are two separate estimators for the state value function and the (state-dependent) action advantage function. This allows learning how valuable states are without considering the effect actions. This helps especially in scenarios where the action does not affect the envionrment (e.g. no banana in view).
+
+Lastly [prioritized experience replay](https://arxiv.org/abs/1511.05952) could also help to further boost performance. In conventional DQN experiences are samples from the replay memory proportial to the frequency they occured. Priority experience replay, as the name suggests, prioritizes experiences containing important transitions and samples them more frequently. This leads to more effienct training.
 
 ### Learning from Pixels
 
